@@ -18,10 +18,11 @@ public class EVC {
             System.out.print("\n-EVCPLUS-\nFadlan geli PIN-kaaga: ");
             int enteredPin = input.nextInt();
             input.nextLine();
-
+            // pin user soo galino waa inoo la egadaa correct pin
             if (enteredPin == CORRECT_PIN) {
                 //sababta uisticmaalay boolean iyo loopka inay menu isoo dhoqdo rabay waayo
-                //tusaale 4 uwareeji dhahay lacagta lacagtii aan wareejiyay inaa ka dhax arko last action oo ah case5 ah
+                //tusaale 4 uwareeji dhahay lacagta lacagtii aan wareejiyay inaa ka dhax arko last action oo ah case5 ah liikn hada manta dhan run garayo mar lacag diro hada run garayo
+                //hadana case 5 last action fiirinaa hada dhaho waxba ma arkayo soo dhoq dhoqoshada menu faaido iigu jirto
                 boolean siiwad_menu = true;
                 while (siiwad_menu) {
                     System.out.println("\n------ EVCPlus ------");
@@ -247,7 +248,7 @@ public class EVC {
                                             double fullBill = 25.0;
                                             System.out.print("Ma hubtaa inaad bixiso $" + fullBill + "? (Haa/Maya): ");
                                             String confirmBill = input.nextLine();
-                                              //equalsIgnoreCase waxay iiqabanee inay labo string isbar bardhigto tusaale 'Haa' ama'haa'
+                                              //equalsIgnoreCase waxay iiqabanee inay labo string isbar bardhigto iyadoo aan la eegin far waaweyn iyo far yaryar tusaale 'Haa' ama'haa'
                                             if (confirmBill.equalsIgnoreCase("Haa") && fullBill <= balance) {
                                                 balance -= fullBill;
                                                 lastAmount = fullBill;
@@ -654,9 +655,7 @@ public class EVC {
         }
         return balance;
     }
-
-
-
-
-
 }
+
+
+
