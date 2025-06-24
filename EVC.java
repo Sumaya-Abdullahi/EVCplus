@@ -20,9 +20,6 @@ public class EVC {
             input.nextLine();
             // pin user soo galino waa inoo la egadaa correct pin
             if (enteredPin == CORRECT_PIN) {
-                //sababta uisticmaalay boolean iyo loopka inay menu isoo dhoqdo rabay waayo
-                //tusaale 4 uwareeji dhahay lacagta lacagtii aan wareejiyay inaa ka dhax arko last action oo ah case5 ah liikn hada manta dhan run garayo mar lacag diro hada run garayo
-                //hadana case 5 last action fiirinaa hada dhaho waxba ma arkayo soo dhoq dhoqoshada menu faaido iigu jirto
                 boolean siiwad_menu = true;
                 while (siiwad_menu) {
                     System.out.println("\n------ EVCPlus ------");
@@ -656,6 +653,10 @@ public class EVC {
         return balance;
     }
 }
+ //Ustaad sababta uisticmaalay boolean iyo loopka inay menu isoo dhoqdo rabay waayo
+//tusaale 4 uwareeji dhahay lacagta lacagtii aan wareejiyay inaa ka dhax arko last action oo ah case5 ah liikn hada manta dhan run garayo mar lacag diro hada run garayo
+ //hadana case 5 last action fiirinaa hada dhaho waxba ma arkayo soo dhoq dhoqoshada menu faaido iigu jirto 
+
 
 
 
