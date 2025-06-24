@@ -18,7 +18,7 @@ public class EVC {
             System.out.print("\n-EVCPLUS-\nFadlan geli PIN-kaaga: ");
             int enteredPin = input.nextInt();
             input.nextLine();
-            // pin user soo galino waa inoo la egadaa correct pin
+            // pin user soo galino waa inoo la ekadaa correct pin
             if (enteredPin == CORRECT_PIN) {
                 boolean siiwad_menu = true;
                 while (siiwad_menu) {
