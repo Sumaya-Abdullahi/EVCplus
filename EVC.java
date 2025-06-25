@@ -9,6 +9,9 @@ public class EVC {
         double balance = 1000.0;
         double lastAmount = 0.0;
         String lastSentTo = "";
+          // Array kaydiya 3 wareejin ugu dambeysay
+        String[] mylist = new String[3];
+        int numberIndex = 0;
 
         Scanner input = new Scanner(System.in);
         System.out.print("Fadlan gali EVC_CODE :");
@@ -319,6 +322,10 @@ public class EVC {
                                     balance -= amount;
                                     lastAmount = amount;
                                     lastSentTo = sendTo;
+                                    
+                                     // Kaydinta wareejinta array-ga
+                                    mylist[numberIndex % 5] = "$" + amount + " u wareejisay " + sendTo;
+                                    numberIndex++;
                                     System.out.println("Waxaa u wareejisay $" + amount + " numberka " + sendTo);
                                     System.out.println("[-EVCPLUS-] Haraagaagu waa: $" + balance);
                                 } else if (choice == 2) {
@@ -375,10 +382,15 @@ public class EVC {
                                     }
                                     break;
                                 case 4:
-                                    System.out.println("3-dii dhaqdhaqaaq ee u dambeysay:");
-                                    System.out.println("1. U dirtay numberka " + lastSentTo);
-                                    System.out.println("2. U dirtay numberka 2345678");
-                                    System.out.println("3. U dirtay numberka  456123");
+                                      System.out.println("3-dii dhaqdhaqaaq ee u dambeysay:");
+                                    int count = 0;
+                                    for (int i = numberIndex- 1; i >= 0 && count < 3; i--) {
+                                        int index = i % 5;
+                                        if (mylist[index] != null) {
+                                            System.out.println((count + 1) + ". " + mylist[index]);
+                                            count++;
+                                        }
+                                    }
                                     break;
                                 case 5:
                                     System.out.print("Fadlan geli emailkaaga: ");
@@ -393,8 +405,8 @@ public class EVC {
                                     System.out.println("Maclumadkaaga waxaa loo diri doonaa " + email +
                                             " laga bilaabo " + bilowgatDate + " ilaa " + dhamadkaDate);
                                     break;
-
-
+                              default:
+                                System.out.println("wrong");
 
                             }
                             break;
